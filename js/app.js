@@ -18,3 +18,7 @@ function getUserData(username) {
         };
     });
 };
+
+(function firstLoad() {
+    getUserData("octocat");
+})();

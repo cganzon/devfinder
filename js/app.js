@@ -1,5 +1,5 @@
 const usernameInput = document.querySelector(".username");
-const seacrchBtn = document.querySelector(".search-btn");
+const searchBtn = document.querySelector(".search-btn");
 
 fetch("https://api.github.com/users/octocat")
     .then(res => res.json())

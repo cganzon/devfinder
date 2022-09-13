@@ -4,8 +4,11 @@ const searchBtn = document.querySelector(".search-btn");
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const usernameValue = usernameInput.value.trim();
+    getUserData(usernameValue);
+});
 
-    fetch(`https://api.github.com/users/${usernameValue}`)
+function getUserData(username) {
+    fetch(`https://api.github.com/users/${username}`)
     .then(res => res.json())
     .then(data => {
         if(data.message === "Not Found") {
@@ -14,4 +17,4 @@ searchBtn.addEventListener("click", (e) => {
             console.log(data);
         };
     });
-});
+};

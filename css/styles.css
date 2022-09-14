@@ -7,3 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: #f6f8ff;
+    color: #4b6a9b;
+}

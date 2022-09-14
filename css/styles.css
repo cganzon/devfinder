@@ -9,9 +9,14 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: "Space Mono", monospace;
     background-color: #f6f8ff;
     color: #4b6a9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 24px;
 }
 
 button {
@@ -23,9 +28,8 @@ button:hover {
 }
 
 .container {
+    flex-grow: 1;
     max-width: 730px;
-    margin: 0 auto;
-    padding: 31px 24px;
 }
 
 .header {
@@ -68,6 +72,6 @@ button:hover {
     fill: #222731;
 }
 
-.theme-toggle-button:hover  .theme-toggle-img path {
+.theme-toggle-button:hover .theme-toggle-img path {
     fill: #222731;
 }

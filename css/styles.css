@@ -14,8 +14,43 @@ body {
     color: #4b6a9b;
 }
 
+button {
+    font-family: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .container {
     max-width: 730px;
     margin: 0 auto;
     padding: 31px 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.website {
+    color: #222731;
+    font-size: 26px;
+    line-height: 38.51px;
+}
+
+.theme-toggle-wrapper {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    color: inherit;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19.25px;
+    letter-spacing: 2.5px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }

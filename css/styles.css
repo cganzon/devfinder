@@ -54,3 +54,20 @@ button:hover {
     align-items: center;
     gap: 16px;
 }
+
+.theme-toggle-img {
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle-button:hover {
+    color: #222731;
+}
+
+.theme-toggle-button:hover > .theme-toggle-img {
+    transform: scale(1.25);
+    fill: #222731;
+}
+
+.theme-toggle-button:hover  .theme-toggle-img path {
+    fill: #222731;
+}

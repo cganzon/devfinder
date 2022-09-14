@@ -13,3 +13,9 @@ body {
     background-color: #f6f8ff;
     color: #4b6a9b;
 }
+
+.container {
+    max-width: 730px;
+    margin: 0 auto;
+    padding: 31px 24px;
+}

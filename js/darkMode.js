@@ -27,7 +27,7 @@ function enableDarkMode() {
 
 function disableDarkMode() {
     document.body.classList.remove("dark-mode");
-    localStorage.setItem("dark-mode", null);
+    localStorage.setItem("dark-mode", "disabled");
     moonIcon.classList.add("show");
     sunIcon.classList.remove("show");
 };

@@ -82,7 +82,13 @@ button:hover {
 }
 
 .theme-toggle-img {
+    display: none;
     transition: transform 0.2s ease;
+}
+
+/* Utility class to switch the theme toggle button icon */
+.show {
+    display: block;
 }
 
 .theme-toggle-img path {

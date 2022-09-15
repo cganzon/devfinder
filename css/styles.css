@@ -17,6 +17,7 @@
     --text-color-one: #2b3442;
     --text-color-two: #4b6a9b;
     --text-color-three: #697c9a;
+    --theme-toggle-hover-color: #222731;
 }
 
 /* Dark mode colors */
@@ -26,6 +27,7 @@
     --text-color-one: #ffffff;
     --text-color-two: #ffffff;
     --text-color-three: #ffffff;
+    --theme-toggle-hover-color: #90a4d4;
 }
 
 body {
@@ -83,15 +85,19 @@ button:hover {
     transition: transform 0.2s ease;
 }
 
+.theme-toggle-img path {
+    fill: var(--text-color-two);
+}
+
 .theme-toggle-button:hover {
-    color: var(--text-color-one);
+    color: var(--theme-toggle-hover-color);
 }
 
 .theme-toggle-button:hover > .theme-toggle-img {
     transform: scale(1.25);
-    fill: var(--text-color-one);
+    fill: var(--theme-toggle-hover-color);
 }
 
 .theme-toggle-button:hover .theme-toggle-img path {
-    fill: var(--text-color-one);
+    fill: var(--theme-toggle-hover-color);
 }

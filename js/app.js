@@ -1,8 +1,5 @@
 const usernameInput = document.querySelector(".username");
 const searchBtn = document.querySelector(".search-btn");
-const userName = document.querySelector(".user-name");
-const userLogin = document.querySelector(".user-login");
-const userAvatar = document.querySelector(".user-avatar");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -24,6 +21,10 @@ function getUserData(username) {
 };
 
 function displayUserData(user) {
+    const userName = document.querySelector(".user-name");
+    const userLogin = document.querySelector(".user-login");
+    const userAvatar = document.querySelector(".user-avatar");
+
     userName.textContent = user.name;
     userLogin.textContent = `@${user.login}`;
     userAvatar.src = user.avatar_url;

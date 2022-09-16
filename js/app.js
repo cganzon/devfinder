@@ -28,6 +28,7 @@ function displayUserData(user) {
     userName.textContent = user.name;
     userLogin.textContent = `@${user.login}`;
     userAvatar.src = user.avatar_url;
+    userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
 };
 
 getUserData("octocat");

@@ -30,6 +30,4 @@ function displayUserData(user) {
     userAvatar.src = user.avatar_url;
 };
 
-(function firstLoad() {
-    getUserData("octocat");
-})();
+getUserData("octocat");

@@ -83,7 +83,7 @@ button:hover {
 
 .theme-toggle-img {
     display: none;
-    transition: transform 0.2s ease;
+    transition: scale 0.2s ease;
 }
 
 /* Utility class to switch the theme toggle button icon */
@@ -100,7 +100,7 @@ button:hover {
 }
 
 .theme-toggle-button:hover > .theme-toggle-img {
-    transform: scale(1.25);
+    scale: 1.25;
     fill: var(--theme-toggle-hover-color);
 }
 

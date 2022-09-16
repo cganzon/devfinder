@@ -1,5 +1,8 @@
 const usernameInput = document.querySelector(".username");
 const searchBtn = document.querySelector(".search-btn");
+const userName = document.querySelector(".user-name");
+const userLogin = document.querySelector(".user-login");
+const userAvatar = document.querySelector(".user-avatar");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -15,8 +18,15 @@ function getUserData(username) {
             console.log("No results");
         } else {
             console.log(data);
+            displayUserData(data);
         };
     });
+};
+
+function displayUserData(user) {
+    userName.textContent = user.name;
+    userLogin.textContent = `@${user.login}`;
+    userAvatar.src = user.avatar_url;
 };
 
 (function firstLoad() {

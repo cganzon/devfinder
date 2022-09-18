@@ -118,6 +118,7 @@ button:hover {
     border: none;
     border-radius: 15px;
     font-size: 13px;
+    line-height: 25px;
     color: var(--text-color-two);
     background-color: var(--bg-secondary);
     padding: 18px 98px 18px 45px;
@@ -126,6 +127,29 @@ button:hover {
 
 .username::placeholder {
     color: var(--text-color-two);
+    font-size: 13px;
+}
+
+.search-icon {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+}
+
+.search-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12.5px 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
 }
 
 .user-avatar {

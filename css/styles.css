@@ -157,6 +157,10 @@ button:hover {
 }
 
 @media(min-width: 768px) {
+    .search-form {
+        margin-bottom: 24px;
+    }
+    
     .username {
         font-size: 18px;
         padding: 22px 140px 22px 80px;

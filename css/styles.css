@@ -152,6 +152,10 @@ button:hover {
     right: 7px;
 }
 
+.search-btn:hover {
+    background-color: #60ABFF;
+}
+
 .user-avatar {
     max-width: 100%;
 }

@@ -23,6 +23,7 @@ function getUserData(username) {
 function displayUserData(user) {
     const userName = document.querySelector(".user-name");
     const userLogin = document.querySelector(".user-login");
+    const joinDate = document.querySelector(".joined");
     const userAvatar = document.querySelector(".user-avatar");
     const reposNum = document.querySelector(".repos-num");
     const followersNum = document.querySelector(".followers-num");
@@ -30,6 +31,7 @@ function displayUserData(user) {
 
     userName.textContent = user.name;
     userLogin.textContent = `@${user.login}`;
+    joinDate.textContent = user.created_at;
     userAvatar.src = user.avatar_url;
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
 

@@ -16,6 +16,7 @@ function getUserData(username) {
         } else {
             console.log(data);
             displayUserData(data);
+            usernameInput.value = "";
         };
     });
 };

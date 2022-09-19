@@ -24,11 +24,18 @@ function displayUserData(user) {
     const userName = document.querySelector(".user-name");
     const userLogin = document.querySelector(".user-login");
     const userAvatar = document.querySelector(".user-avatar");
+    const reposNum = document.querySelector(".repos-num");
+    const followersNum = document.querySelector(".followers-num");
+    const followingNum = document.querySelector(".following-num");
 
     userName.textContent = user.name;
     userLogin.textContent = `@${user.login}`;
     userAvatar.src = user.avatar_url;
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
+
+    reposNum.textContent = user.public_repos;
+    followersNum.textContent = user.followers;
+    followingNum.textContent = user.following;
 };
 
 getUserData("octocat");

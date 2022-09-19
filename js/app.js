@@ -31,13 +31,21 @@ function displayUserData(user) {
 
     userName.textContent = user.name;
     userLogin.textContent = `@${user.login}`;
-    joinDate.textContent = user.created_at;
+    joinDate.textContent = `Joined ${convertDate(user.created_at)}`;
     userAvatar.src = user.avatar_url;
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
 
     reposNum.textContent = user.public_repos;
     followersNum.textContent = user.followers;
     followingNum.textContent = user.following;
+};
+
+function convertDate(datetime) {
+    const date = new Date(datetime);
+    const month = date.toLocaleString("default", { month: "short" });
+    const day = date.getDate();
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
 };
 
 getUserData("octocat");

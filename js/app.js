@@ -31,7 +31,11 @@ function displayUserData(user) {
     const followersNum = document.querySelector(".followers-num");
     const followingNum = document.querySelector(".following-num");
 
-    userName.textContent = user.name;
+    if(user.name === null) {
+        userName.textContent = user.login;
+    } else {
+        userName.textContent = user.name;
+    };
     userLogin.textContent = `@${user.login}`;
     joinDate.textContent = `Joined ${convertDate(user.created_at)}`;
     userAvatar.src = user.avatar_url;

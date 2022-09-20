@@ -213,6 +213,11 @@ button:hover {
     border-radius: 50%;
 }
 
+.stats {
+    background-color: var(--bg-main);
+    border-radius: 10px;
+}
+
 .stat {
     color: var(--text-color-one);
     font-weight: 700;

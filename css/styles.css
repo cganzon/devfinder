@@ -197,7 +197,23 @@ button:hover {
     background-color: var(--bg-secondary);
     border-radius: 15px;
     box-shadow: var(--box-shadow);
+    padding: 24px;
 }
+
+.user-name {
+    color: var(--text-color-one);
+}
+
+.user-login {
+    color: var(--accent-color);
+}
+
 .user-avatar {
     max-width: 100%;
+    border-radius: 50%;
+}
+
+.stat {
+    color: var(--text-color-one);
+    font-weight: 700;
 }

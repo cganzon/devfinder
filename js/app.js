@@ -37,7 +37,7 @@ function displayUserData(user) {
     userAvatar.src = user.avatar_url;
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
     if(user.bio === null) {
-        bio.textContent = "This user has no bio.";
+        bio.textContent = "This profile has no bio.";
     } else {
         bio.textContent = user.bio;
     };

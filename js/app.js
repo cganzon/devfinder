@@ -26,6 +26,7 @@ function displayUserData(user) {
     const userLogin = document.querySelector(".user-login");
     const joinDate = document.querySelector(".joined");
     const userAvatar = document.querySelector(".user-avatar");
+    const bio = document.querySelector(".bio");
     const reposNum = document.querySelector(".repos-num");
     const followersNum = document.querySelector(".followers-num");
     const followingNum = document.querySelector(".following-num");
@@ -35,7 +36,11 @@ function displayUserData(user) {
     joinDate.textContent = `Joined ${convertDate(user.created_at)}`;
     userAvatar.src = user.avatar_url;
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
-
+    if(user.bio === null) {
+        bio.textContent = "This user has no bio.";
+    } else {
+        bio.textContent = user.bio;
+    };
     reposNum.textContent = user.public_repos;
     followersNum.textContent = user.followers;
     followingNum.textContent = user.following;

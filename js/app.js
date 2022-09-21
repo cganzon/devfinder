@@ -11,10 +11,13 @@ function getUserData(username) {
     fetch(`https://api.github.com/users/${username}`)
     .then(res => res.json())
     .then(data => {
+        const error = document.querySelector(".error");
         if(data.message === "Not Found") {
+            error.classList.add("show");
             console.log("No results");
         } else {
             console.log(data);
+            error.classList.remove("show");
             displayUserData(data);
             usernameInput.value = "";
         };

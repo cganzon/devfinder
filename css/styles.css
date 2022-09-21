@@ -91,11 +91,6 @@ button:hover {
     transition: scale 0.2s ease;
 }
 
-/* Utility class to switch the theme toggle button icon */
-.show {
-    display: block;
-}
-
 .theme-toggle-img path {
     fill: var(--text-color-two);
 }
@@ -172,6 +167,11 @@ button:hover {
     right: 7px;
     top: -25px;
     display: none;
+}
+
+/* Utility class to switch the theme toggle button icon and to show/hide the error message */
+.show {
+    display: block;
 }
 
 @media(min-width: 768px) {

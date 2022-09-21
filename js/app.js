@@ -14,7 +14,6 @@ function getUserData(username) {
         const error = document.querySelector(".error");
         if(data.message === "Not Found") {
             error.classList.add("show");
-            console.log("No results");
         } else {
             console.log(data);
             error.classList.remove("show");

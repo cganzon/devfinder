@@ -174,7 +174,7 @@ button:hover {
     display: block;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 600px) {
     .search-form {
         margin-bottom: 24px;
     }
@@ -224,7 +224,7 @@ button:hover {
 }
 
 .user-avatar {
-    max-width: 70px;
+    width: 70px;
     border-radius: 50%;
 }
 
@@ -253,4 +253,35 @@ button:hover {
 .stat {
     color: var(--text-color-one);
     font-weight: 700;
+}
+
+@media(min-width: 600px) {
+    .user-card {
+        padding: 40px;
+    }
+
+    .user-info {
+        gap: 41px;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .user-avatar {
+        width: 117px;
+    }
+
+    .user-name {
+        font-size: 26px;
+        line-height: 38.51px;
+    }
+
+    .user-login {
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .joined {
+        font-size: 15px;
+        line-height: 22.22px;
+    }
 }

@@ -220,7 +220,6 @@ button:hover {
 .user-top {
     display: flex;
     gap: 19px;
-    margin-bottom: 33px;
 }
 
 .user-avatar {
@@ -245,6 +244,10 @@ button:hover {
     line-height: 19.25px;
 }
 
+.user-bottom {
+    margin-top: 33px;
+}
+
 .user-stats {
     background-color: var(--bg-main);
     border-radius: 10px;
@@ -263,7 +266,6 @@ button:hover {
     .user-top {
         gap: 37px;
         align-items: center;
-        margin-bottom: 24px;
     }
 
     .user-avatar {
@@ -284,6 +286,10 @@ button:hover {
         font-size: 15px;
         line-height: 22.22px;
     }
+
+    .user-bottom {
+        margin-top: 24px;
+    }
 }
 
 @media(min-width: 900px) {
@@ -303,5 +309,11 @@ button:hover {
 
     .joined {
         margin-top: 10px;
+    }
+
+    .user-bottom {
+        width: 480px;
+        margin-left: auto;
+        margin-top: -44px;
     }
 }

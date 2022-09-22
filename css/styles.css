@@ -217,7 +217,7 @@ button:hover {
     padding: 24px;
 }
 
-.user-info {
+.user-top {
     display: flex;
     gap: 19px;
     margin-bottom: 33px;
@@ -260,7 +260,7 @@ button:hover {
         padding: 40px;
     }
 
-    .user-info {
+    .user-top {
         gap: 37px;
         align-items: center;
         margin-bottom: 24px;
@@ -291,7 +291,7 @@ button:hover {
         padding: 48px;
     }
 
-    .user-info {
+    .user-top {
         align-items: flex-start;
     }
 

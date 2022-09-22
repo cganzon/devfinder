@@ -261,7 +261,7 @@ button:hover {
     }
 
     .user-info {
-        gap: 41px;
+        gap: 37px;
         align-items: center;
         margin-bottom: 24px;
     }
@@ -283,5 +283,25 @@ button:hover {
     .joined {
         font-size: 15px;
         line-height: 22.22px;
+    }
+}
+
+@media(min-width: 900px) {
+    .user-card {
+        padding: 48px;
+    }
+
+    .user-info {
+        align-items: flex-start;
+    }
+
+    .user-right {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .joined {
+        margin-top: 10px;
     }
 }

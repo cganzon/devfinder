@@ -258,6 +258,11 @@ button:hover {
     font-weight: 700;
 }
 
+.bio {
+    font-size: 13px;
+    margin-bottom: 23px;
+}
+
 @media(min-width: 600px) {
     .user-card {
         padding: 40px;
@@ -289,6 +294,11 @@ button:hover {
 
     .user-bottom {
         margin-top: 24px;
+    }
+    
+    .bio {
+        font-size: 15px;
+        margin-bottom: 32px;
     }
 }
 

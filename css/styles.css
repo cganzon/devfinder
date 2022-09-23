@@ -174,7 +174,7 @@ button:hover {
     display: block;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 768px) {
     .search-form {
         margin-bottom: 24px;
     }
@@ -273,9 +273,14 @@ button:hover {
     color: var(--text-color-one);
     font-size: 16px;
     font-weight: 700;
+    line-height: 23.7px;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 768px) {
+    body {
+        margin: 0 97px;
+    }
+
     .user-card {
         padding: 40px;
     }
@@ -312,9 +317,26 @@ button:hover {
         font-size: 15px;
         margin-bottom: 32px;
     }
+
+    .user-stats {
+        padding: 15px 96px 17px 32px;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .stat-title {
+        font-size: 13px;
+        line-height: 19.25px;
+        margin-bottom: 1px;
+    }
+
+    .stat {
+        font-size: 22px;
+        line-height: 32.58px;
+    }
 }
 
-@media(min-width: 900px) {
+@media(min-width: 1024px) {
     .user-card {
         padding: 48px;
     }

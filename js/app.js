@@ -47,6 +47,7 @@ function displayUserData(user) {
         bio.style.opacity = 0.5;
     } else {
         bio.textContent = user.bio;
+        bio.style.opacity = 1;
     };
     reposNum.textContent = user.public_repos;
     followersNum.textContent = user.followers;

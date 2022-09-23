@@ -360,4 +360,8 @@ button:hover {
         margin-left: auto;
         margin-top: -44px;
     }
+
+    .user-stats {
+        padding: 15px 83px 17px 32px;
+    }
 }

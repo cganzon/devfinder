@@ -56,35 +56,21 @@ function displayUserData(user) {
     followersNum.textContent = user.followers;
     followingNum.textContent = user.following;
 
-    if(user.location === null) {
-        locationDisplay.textContent = "Not Available";
-        locationDisplay.classList.add("transparent");
-    } else {
-        locationDisplay.textContent = user.location;
-        locationDisplay.classList.remove("transparent");
-    };
-    if(user.blog === null) {
-        blogDisplay.textContent = "Not Available";
-        blogDisplay.classList.add("transparent");
-    } else {
-        blogDisplay.textContent = user.blog;
-        blogDisplay.classList.remove("transparent");
-    };
-    if(user.twitter_username === null) {
-        twitterDisplay.textContent = "Not Available";
-        twitterDisplay.classList.add("transparent");
-    } else {
-        twitterDisplay.textContent = user.twitter_username;
-        twitterDisplay.classList.remove("transparent");
-    };
-    if(user.company === null) {
-        companyDisplay.textContent = "Not Available";
-        companyDisplay.classList.add("transparent");
-    } else {
-        companyDisplay.textContent = user.company;
-        companyDisplay.classList.remove("transparent");
-    };
+    checkAPIData(user.location, locationDisplay);
+    checkAPIData(user.blog, blogDisplay);
+    checkAPIData(user.twitter_username, twitterDisplay);
+    checkAPIData(user.company, companyDisplay);
 };
+
+function checkAPIData(data, display) {
+    if(data === null) {
+        display.textContent = "Not Available";
+        display.classList.add("transparent");
+    } else {
+        display.textContent = data;
+        display.classList.remove("transparent");
+    };
+}
 
 function convertDate(datetime) {
     const date = new Date(datetime);

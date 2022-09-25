@@ -244,7 +244,7 @@ button:hover {
     line-height: 19.25px;
 }
 
-.user-bottom {
+.user-middle {
     margin-top: 33px;
 }
 
@@ -314,7 +314,7 @@ button:hover {
         line-height: 22.22px;
     }
 
-    .user-bottom {
+    .user-middle {
         margin-top: 24px;
     }
     
@@ -360,7 +360,7 @@ button:hover {
         margin-top: 10px;
     }
 
-    .user-bottom {
+    .user-middle {
         width: 480px;
         margin-left: auto;
         margin-top: -44px;

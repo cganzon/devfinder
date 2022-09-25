@@ -8,6 +8,10 @@ const bio = document.querySelector(".bio");
 const reposNum = document.querySelector(".repos-num");
 const followersNum = document.querySelector(".followers-num");
 const followingNum = document.querySelector(".following-num");
+const locationDisplay = document.querySelector(".location")
+const blog = document.querySelector(".blog");
+const twitter = document.querySelector(".twitter");
+const company = document.querySelector(".company");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -51,6 +55,35 @@ function displayUserData(user) {
     reposNum.textContent = user.public_repos;
     followersNum.textContent = user.followers;
     followingNum.textContent = user.following;
+
+    if(user.location === null) {
+        locationDisplay.textContent = "Not Available";
+        locationDisplay.classList.add("transparent");
+    } else {
+        locationDisplay.textContent = user.location;
+        locationDisplay.classList.remove("transparent");
+    };
+    if(user.blog === null) {
+        blog.textContent = "Not Available";
+        blog.classList.add("transparent");
+    } else {
+        blog.textContent = user.blog;
+        blog.classList.remove("transparent");
+    };
+    if(user.twitter_username === null) {
+        twitter.textContent = "Not Available";
+        twitter.classList.add("transparent");
+    } else {
+        twitter.textContent = user.twitter_username;
+        twitter.classList.remove("transparent");
+    };
+    if(user.company === null) {
+        company.textContent = "Not Available";
+        company.classList.add("transparent");
+    } else {
+        company.textContent = user.company;
+        company.classList.remove("transparent");
+    };
 };
 
 function convertDate(datetime) {

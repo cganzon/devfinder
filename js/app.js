@@ -1,5 +1,13 @@
 const usernameInput = document.querySelector(".username");
 const searchBtn = document.querySelector(".search-btn");
+const userName = document.querySelector(".user-name");
+const userLogin = document.querySelector(".user-login");
+const joinDate = document.querySelector(".joined");
+const userAvatar = document.querySelector(".user-avatar");
+const bio = document.querySelector(".bio");
+const reposNum = document.querySelector(".repos-num");
+const followersNum = document.querySelector(".followers-num");
+const followingNum = document.querySelector(".following-num");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -24,15 +32,6 @@ function getUserData(username) {
 };
 
 function displayUserData(user) {
-    const userName = document.querySelector(".user-name");
-    const userLogin = document.querySelector(".user-login");
-    const joinDate = document.querySelector(".joined");
-    const userAvatar = document.querySelector(".user-avatar");
-    const bio = document.querySelector(".bio");
-    const reposNum = document.querySelector(".repos-num");
-    const followersNum = document.querySelector(".followers-num");
-    const followingNum = document.querySelector(".following-num");
-
     if(user.name === null) {
         userName.textContent = user.login;
     } else {

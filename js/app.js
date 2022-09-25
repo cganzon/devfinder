@@ -44,10 +44,10 @@ function displayUserData(user) {
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
     if(user.bio === null) {
         bio.textContent = "This profile has no bio.";
-        bio.style.opacity = 0.5;
+        bio.classList.add("transparent");
     } else {
         bio.textContent = user.bio;
-        bio.style.opacity = 1;
+        bio.classList.remove("transparent");
     };
     reposNum.textContent = user.public_repos;
     followersNum.textContent = user.followers;

@@ -276,6 +276,11 @@ button:hover {
     line-height: 23.7px;
 }
 
+/* Utility class to make the user's information transparent if it does not exist */
+.transparent {
+    opacity: 0.5;
+}
+
 @media(min-width: 768px) {
     body {
         margin: 0 97px;

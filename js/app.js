@@ -63,7 +63,7 @@ function displayUserData(user) {
 };
 
 function checkAPIData(data, display) {
-    if(data === null) {
+    if(data === null || data === "") {
         display.textContent = "Not Available";
         display.classList.add("transparent");
     } else {

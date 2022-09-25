@@ -9,9 +9,9 @@ const reposNum = document.querySelector(".repos-num");
 const followersNum = document.querySelector(".followers-num");
 const followingNum = document.querySelector(".following-num");
 const locationDisplay = document.querySelector(".location")
-const blog = document.querySelector(".blog");
-const twitter = document.querySelector(".twitter");
-const company = document.querySelector(".company");
+const blogDisplay = document.querySelector(".blog");
+const twitterDisplay = document.querySelector(".twitter");
+const companyDisplay = document.querySelector(".company");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -64,25 +64,25 @@ function displayUserData(user) {
         locationDisplay.classList.remove("transparent");
     };
     if(user.blog === null) {
-        blog.textContent = "Not Available";
-        blog.classList.add("transparent");
+        blogDisplay.textContent = "Not Available";
+        blogDisplay.classList.add("transparent");
     } else {
-        blog.textContent = user.blog;
-        blog.classList.remove("transparent");
+        blogDisplay.textContent = user.blog;
+        blogDisplay.classList.remove("transparent");
     };
     if(user.twitter_username === null) {
-        twitter.textContent = "Not Available";
-        twitter.classList.add("transparent");
+        twitterDisplay.textContent = "Not Available";
+        twitterDisplay.classList.add("transparent");
     } else {
-        twitter.textContent = user.twitter_username;
-        twitter.classList.remove("transparent");
+        twitterDisplay.textContent = user.twitter_username;
+        twitterDisplay.classList.remove("transparent");
     };
     if(user.company === null) {
-        company.textContent = "Not Available";
-        company.classList.add("transparent");
+        companyDisplay.textContent = "Not Available";
+        companyDisplay.classList.add("transparent");
     } else {
-        company.textContent = user.company;
-        company.classList.remove("transparent");
+        companyDisplay.textContent = user.company;
+        companyDisplay.classList.remove("transparent");
     };
 };
 

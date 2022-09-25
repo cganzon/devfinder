@@ -1,5 +1,6 @@
 const usernameInput = document.querySelector(".username");
 const searchBtn = document.querySelector(".search-btn");
+const error = document.querySelector(".error");
 const userName = document.querySelector(".user-name");
 const userLogin = document.querySelector(".user-login");
 const joinDate = document.querySelector(".joined");
@@ -23,7 +24,6 @@ function getUserData(username) {
     fetch(`https://api.github.com/users/${username}`)
     .then(res => res.json())
     .then(data => {
-        const error = document.querySelector(".error");
         if(data.message === "Not Found") {
             error.classList.add("show");
         } else {
@@ -70,7 +70,7 @@ function checkAPIData(data, display) {
         display.textContent = data;
         display.classList.remove("transparent");
     };
-}
+};
 
 function convertDate(datetime) {
     const date = new Date(datetime);

@@ -5,7 +5,7 @@ const userName = document.querySelector(".user-name");
 const userLogin = document.querySelector(".user-login");
 const joinDate = document.querySelector(".joined");
 const userAvatar = document.querySelector(".user-avatar");
-const bio = document.querySelector(".bio");
+const bioDisplay = document.querySelector(".bio");
 const reposNum = document.querySelector(".repos-num");
 const followersNum = document.querySelector(".followers-num");
 const followingNum = document.querySelector(".following-num");
@@ -36,26 +36,15 @@ function getUserData(username) {
 };
 
 function displayUserData(user) {
-    if(user.name === null) {
-        userName.textContent = user.login;
-    } else {
-        userName.textContent = user.name;
-    };
+    checkUserName(user.name, user.login);
     userLogin.textContent = `@${user.login}`;
     joinDate.textContent = `Joined ${convertDate(user.created_at)}`;
     userAvatar.src = user.avatar_url;
     userAvatar.setAttribute("alt", `Profile picture of ${user.login}`);
-    if(user.bio === null) {
-        bio.textContent = "This profile has no bio.";
-        bio.classList.add("transparent");
-    } else {
-        bio.textContent = user.bio;
-        bio.classList.remove("transparent");
-    };
+    checkUserBio(user.bio);
     reposNum.textContent = user.public_repos;
     followersNum.textContent = user.followers;
     followingNum.textContent = user.following;
-
     checkUserLocation(user.location);
     checkUserBlog(user.blog);
     checkUserTwitter(user.twitter_username);
@@ -68,6 +57,24 @@ function convertDate(datetime) {
     const day = date.getDate();
     const year = date.getFullYear();
     return `${day} ${month} ${year}`;
+};
+
+function checkUserName(username, login) {
+    if(username === null) {
+        userName.textContent = login;
+    } else {
+        userName.textContent = username;
+    };
+};
+
+function checkUserBio(bio) {
+    if(bio === null) {
+        bioDisplay.textContent = "This profile has no bio.";
+        bioDisplay.classList.add("transparent");
+    } else {
+        bioDisplay.textContent = bio;
+        bioDisplay.classList.remove("transparent");
+    };
 };
 
 function checkUserLocation(location) {

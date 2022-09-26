@@ -13,6 +13,10 @@ const locationDisplay = document.querySelector(".location")
 const blogDisplay = document.querySelector(".blog");
 const twitterDisplay = document.querySelector(".twitter");
 const companyDisplay = document.querySelector(".company");
+const locationIcon = document.querySelector(".location-icon");
+const blogIcon = document.querySelector(".blog-icon");
+const twitterIcon = document.querySelector(".twitter-icon");
+const companyIcon = document.querySelector(".company-icon");
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -81,9 +85,12 @@ function checkUserLocation(location) {
     if(location === null || location === "") {
         locationDisplay.classList.add("transparent", "disabled");
         locationDisplay.textContent = "Not Available";
+        locationIcon.classList.add("transparent");
     } else {
         locationDisplay.classList.remove("transparent", "disabled");
         locationDisplay.textContent = location;
+        locationIcon.classList.remove("transparent");
+
     };
 };
 
@@ -91,10 +98,12 @@ function checkUserBlog(blog) {
     if(blog === null || blog === "") {
         blogDisplay.classList.add("transparent", "disabled");
         blogDisplay.textContent = "Not Available";
+        blogIcon.classList.add("transparent");
     } else {
         blogDisplay.classList.remove("transparent", "disabled");
         blogDisplay.textContent = blog;
         blogDisplay.href = blog;
+        blogIcon.classList.remove("transparent");
     };
 };
 
@@ -102,10 +111,12 @@ function checkUserTwitter(twitter) {
     if(twitter === null || twitter === "") {
         twitterDisplay.classList.add("transparent", "disabled");
         twitterDisplay.textContent = "Not Available";
+        twitterIcon.classList.add("transparent");
     } else {
         twitterDisplay.classList.remove("transparent", "disabled");
         twitterDisplay.textContent = twitter;
         twitterDisplay.href = `https://twitter.com/${twitter}`;
+        twitterIcon.classList.remove("transparent");
     };
 };
 
@@ -113,11 +124,13 @@ function checkUserCompany(company) {
     if(company === null || company === "") {
         companyDisplay.classList.add("transparent", "disabled");
         companyDisplay.textContent = "Not Available";
+        companyIcon.classList.add("transparent");
     } else {
         companyDisplay.classList.remove("transparent", "disabled");
         companyDisplay.textContent = company;
         company = company.slice(1);
         companyDisplay.href = `https://github.com/${company}`;
+        companyIcon.classList.remove("transparent");
     };
 };
 

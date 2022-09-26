@@ -83,22 +83,17 @@ function checkUserBio(bio) {
 
 function checkUserLocation(location) {
     if(location === null || location === "") {
-        locationDisplay.classList.add("transparent", "disabled");
-        locationDisplay.textContent = "Not Available";
-        locationIcon.classList.add("transparent");
+        disableLink(locationDisplay, locationIcon);
     } else {
         locationDisplay.classList.remove("transparent", "disabled");
         locationDisplay.textContent = location;
         locationIcon.classList.remove("transparent");
-
     };
 };
 
 function checkUserBlog(blog) {
     if(blog === null || blog === "") {
-        blogDisplay.classList.add("transparent", "disabled");
-        blogDisplay.textContent = "Not Available";
-        blogIcon.classList.add("transparent");
+        disableLink(blogDisplay, blogIcon);
     } else {
         blogDisplay.classList.remove("transparent", "disabled");
         blogDisplay.textContent = blog;
@@ -109,9 +104,7 @@ function checkUserBlog(blog) {
 
 function checkUserTwitter(twitter) {
     if(twitter === null || twitter === "") {
-        twitterDisplay.classList.add("transparent", "disabled");
-        twitterDisplay.textContent = "Not Available";
-        twitterIcon.classList.add("transparent");
+        disableLink(twitterDisplay, twitterIcon);
     } else {
         twitterDisplay.classList.remove("transparent", "disabled");
         twitterDisplay.textContent = twitter;
@@ -122,9 +115,7 @@ function checkUserTwitter(twitter) {
 
 function checkUserCompany(company) {
     if(company === null || company === "") {
-        companyDisplay.classList.add("transparent", "disabled");
-        companyDisplay.textContent = "Not Available";
-        companyIcon.classList.add("transparent");
+        disableLink(companyDisplay, companyIcon);
     } else {
         companyDisplay.classList.remove("transparent", "disabled");
         companyDisplay.textContent = company;
@@ -132,6 +123,12 @@ function checkUserCompany(company) {
         companyDisplay.href = `https://github.com/${company}`;
         companyIcon.classList.remove("transparent");
     };
+};
+
+function disableLink(link, icon) {
+    link.classList.add("transparent", "disabled");
+    link.textContent = "Not Available";
+    icon.classList.add("transparent");
 };
 
 getUserData("octocat");

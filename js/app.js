@@ -85,9 +85,7 @@ function checkUserLocation(location) {
     if(location === null || location === "") {
         disableLink(locationDisplay, locationIcon);
     } else {
-        locationDisplay.classList.remove("transparent", "disabled");
-        locationDisplay.textContent = location;
-        locationIcon.classList.remove("transparent");
+        enableLink(locationDisplay, locationIcon, location);
     };
 };
 
@@ -95,10 +93,8 @@ function checkUserBlog(blog) {
     if(blog === null || blog === "") {
         disableLink(blogDisplay, blogIcon);
     } else {
-        blogDisplay.classList.remove("transparent", "disabled");
-        blogDisplay.textContent = blog;
+        enableLink(blogDisplay, blogIcon, blog);
         blogDisplay.href = blog;
-        blogIcon.classList.remove("transparent");
     };
 };
 
@@ -106,10 +102,8 @@ function checkUserTwitter(twitter) {
     if(twitter === null || twitter === "") {
         disableLink(twitterDisplay, twitterIcon);
     } else {
-        twitterDisplay.classList.remove("transparent", "disabled");
-        twitterDisplay.textContent = twitter;
+        enableLink(twitterDisplay, twitterIcon, twitter);
         twitterDisplay.href = `https://twitter.com/${twitter}`;
-        twitterIcon.classList.remove("transparent");
     };
 };
 
@@ -117,11 +111,9 @@ function checkUserCompany(company) {
     if(company === null || company === "") {
         disableLink(companyDisplay, companyIcon);
     } else {
-        companyDisplay.classList.remove("transparent", "disabled");
-        companyDisplay.textContent = company;
+        enableLink(companyDisplay, companyIcon, company);
         company = company.slice(1);
         companyDisplay.href = `https://github.com/${company}`;
-        companyIcon.classList.remove("transparent");
     };
 };
 
@@ -129,6 +121,12 @@ function disableLink(link, icon) {
     link.classList.add("transparent", "disabled");
     link.textContent = "Not Available";
     icon.classList.add("transparent");
+};
+
+function enableLink(link, icon, data) {
+    link.classList.remove("transparent", "disabled");
+    link.textContent = data;
+    icon.classList.remove("transparent");
 };
 
 getUserData("octocat");

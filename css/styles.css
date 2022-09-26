@@ -269,6 +269,7 @@ a:hover {
     padding: 18px 15px;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 24px;
 }
 
 .stat-title {
@@ -345,6 +346,7 @@ a:hover {
         padding: 15px 96px 17px 32px;
         justify-content: space-between;
         text-align: left;
+        margin-bottom: 30px;
     }
 
     .stat-title {
@@ -386,5 +388,6 @@ a:hover {
 
     .user-stats {
         padding: 15px 83px 17px 32px;
+        margin-bottom: 37px;
     }
 }

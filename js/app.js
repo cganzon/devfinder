@@ -56,56 +56,11 @@ function displayUserData(user) {
     followersNum.textContent = user.followers;
     followingNum.textContent = user.following;
 
-    if(user.location === null || user.location === "") {
-        locationDisplay.classList.add("transparent", "disabled");
-        locationDisplay.textContent = "Not Available";
-    } else {
-        locationDisplay.classList.remove("transparent", "disabled");
-        locationDisplay.textContent = user.location;
-    };
-
-    if(user.blog === null || user.blog === "") {
-        blogDisplay.classList.add("transparent", "disabled");
-        blogDisplay.textContent = "Not Available";
-    } else {
-        blogDisplay.classList.remove("transparent", "disabled");
-        blogDisplay.textContent = user.blog;
-        blogDisplay.href = user.blog;
-    };
-
-    if(user.twitter_username === null || user.twitter_username === "") {
-        twitterDisplay.classList.add("transparent", "disabled");
-        twitterDisplay.textContent = "Not Available";
-    } else {
-        twitterDisplay.classList.remove("transparent", "disabled");
-        twitterDisplay.textContent = user.twitter_username;
-        twitterDisplay.href = `https://twitter.com/${user.twitter_username}`;
-    };
-
-    if(user.company === null || user.company === "") {
-        companyDisplay.classList.add("transparent", "disabled");
-        companyDisplay.textContent = "Not Available";
-    } else {
-        companyDisplay.classList.remove("transparent", "disabled");
-        companyDisplay.textContent = user.company;
-        const company = user.company.slice(1);
-        companyDisplay.href = `https://github.com/${company}`;
-    };
-    // checkAPIData(user.location, locationDisplay);
-    // checkAPIData(user.blog, blogDisplay);
-    // checkAPIData(user.twitter_username, twitterDisplay);
-    // checkAPIData(user.company, companyDisplay);
+    checkUserLocation(user.location);
+    checkUserBlog(user.blog);
+    checkUserTwitter(user.twitter_username);
+    checkUserCompany(user.company);
 };
-
-// function checkAPIData(data, display) {
-//     if(data === null || data === "") {
-//         display.textContent = "Not Available";
-//         display.classList.add("transparent", "disabled");
-//     } else {
-//         display.textContent = data;
-//         display.classList.remove("transparent", "disabled");
-//     };
-// };
 
 function convertDate(datetime) {
     const date = new Date(datetime);
@@ -113,6 +68,50 @@ function convertDate(datetime) {
     const day = date.getDate();
     const year = date.getFullYear();
     return `${day} ${month} ${year}`;
+};
+
+function checkUserLocation(location) {
+    if(location === null || location === "") {
+        locationDisplay.classList.add("transparent", "disabled");
+        locationDisplay.textContent = "Not Available";
+    } else {
+        locationDisplay.classList.remove("transparent", "disabled");
+        locationDisplay.textContent = location;
+    };
+};
+
+function checkUserBlog(blog) {
+    if(blog === null || blog === "") {
+        blogDisplay.classList.add("transparent", "disabled");
+        blogDisplay.textContent = "Not Available";
+    } else {
+        blogDisplay.classList.remove("transparent", "disabled");
+        blogDisplay.textContent = blog;
+        blogDisplay.href = blog;
+    };
+};
+
+function checkUserTwitter(twitter) {
+    if(twitter === null || twitter === "") {
+        twitterDisplay.classList.add("transparent", "disabled");
+        twitterDisplay.textContent = "Not Available";
+    } else {
+        twitterDisplay.classList.remove("transparent", "disabled");
+        twitterDisplay.textContent = twitter;
+        twitterDisplay.href = `https://twitter.com/${twitter}`;
+    };
+};
+
+function checkUserCompany(company) {
+    if(company === null || company === "") {
+        companyDisplay.classList.add("transparent", "disabled");
+        companyDisplay.textContent = "Not Available";
+    } else {
+        companyDisplay.classList.remove("transparent", "disabled");
+        companyDisplay.textContent = company;
+        company = company.slice(1);
+        companyDisplay.href = `https://github.com/${company}`;
+    };
 };
 
 getUserData("octocat");

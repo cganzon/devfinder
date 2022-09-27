@@ -63,7 +63,7 @@ a:hover {
 
 .container {
     flex-grow: 1;
-    max-width: 730px;
+    max-width: 500px;
 }
 
 /* ///////////// */
@@ -181,6 +181,10 @@ a:hover {
 }
 
 @media(min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
     .search-form {
         margin-bottom: 24px;
     }

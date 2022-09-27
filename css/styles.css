@@ -281,8 +281,22 @@ a:hover {
     line-height: 23.7px;
 }
 
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.links-top .link-wrapper:first-of-type {
+    gap: 19.25px;
+}
+
 .link-icon path {
     fill: var(--text-color-two);
+}
+
+.link-wrapper {
+    margin-bottom: 16px;
 }
 
 /* Utility class to make the user's information transparent if it does not exist */
@@ -353,6 +367,19 @@ a:hover {
         font-size: 22px;
         line-height: 32.58px;
     }
+
+    .user-bottom {
+        display: flex;
+        gap: 62px;
+    }
+
+    .link-wrapper {
+        margin-bottom: 19px;
+    }
+    
+    .links-bottom .link-wrapper:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -383,5 +410,14 @@ a:hover {
     .user-stats {
         padding: 15px 83px 17px 32px;
         margin-bottom: 37px;
+    }
+
+    .user-bottom {
+        width: 480px;
+        margin-left: auto;
+    }
+
+    .links-top .link-wrapper:last-of-type {
+        margin-bottom: 0;
     }
 }

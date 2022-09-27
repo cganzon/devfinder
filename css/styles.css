@@ -34,6 +34,7 @@
 
 body {
     min-height: 100vh;
+    font-size: 13px;
     font-family: "Space Mono", monospace;
     background-color: var(--bg-main);
     color: var(--text-color-two);
@@ -87,7 +88,6 @@ a:hover {
     text-transform: uppercase;
     color: inherit;
     font-weight: 700;
-    font-size: 13px;
     line-height: 19.25px;
     letter-spacing: 2.5px;
     display: flex;
@@ -129,7 +129,6 @@ a:hover {
     width: 100%;
     border: none;
     border-radius: 15px;
-    font-size: 13px;
     line-height: 25px;
     color: var(--text-color-two);
     background-color: var(--bg-secondary);
@@ -139,7 +138,6 @@ a:hover {
 
 .username::placeholder {
     color: var(--text-color-two);
-    font-size: 13px;
 }
 
 .search-icon {
@@ -170,7 +168,6 @@ a:hover {
 
 .error {
     color: #F74646;
-    font-size: 13px;
     font-weight: 700;
     position: absolute;
     right: 7px;
@@ -249,7 +246,6 @@ a:hover {
 
 .user-login,
 .joined {
-    font-size: 13px;
     line-height: 19.25px;
 }
 
@@ -258,7 +254,6 @@ a:hover {
 }
 
 .bio {
-    font-size: 13px;
     margin-bottom: 23px;
 }
 

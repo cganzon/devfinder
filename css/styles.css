@@ -297,6 +297,7 @@ a:hover {
 
 @media(min-width: 768px) {
     body {
+        font-size: 15px;
         margin: 0 97px;
     }
 
@@ -324,7 +325,6 @@ a:hover {
     }
 
     .joined {
-        font-size: 15px;
         line-height: 22.22px;
     }
 
@@ -333,7 +333,6 @@ a:hover {
     }
     
     .bio {
-        font-size: 15px;
         margin-bottom: 32px;
     }
 

@@ -120,12 +120,14 @@ function checkUserCompany(company) {
 function disableLink(link, icon) {
     link.classList.add("transparent", "disabled");
     link.textContent = "Not Available";
+    link.tabIndex = -1;
     icon.classList.add("transparent");
 };
 
 function enableLink(link, icon, data) {
     link.classList.remove("transparent", "disabled");
     link.textContent = data;
+    link.removeAttribute("tabIndex");
     icon.classList.remove("transparent");
 };
 

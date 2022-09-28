@@ -379,6 +379,7 @@ a:hover {
 
     .link-wrapper {
         margin-bottom: 19px;
+        flex-wrap: wrap;
     }
     
     .links-bottom .link-wrapper:last-of-type {

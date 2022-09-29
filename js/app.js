@@ -64,7 +64,7 @@ function convertDate(datetime) {
 };
 
 function checkUserName(username, login) {
-    if(username === null) {
+    if(username === null || username === "") {
         userName.textContent = login;
     } else {
         userName.textContent = username;
@@ -72,7 +72,7 @@ function checkUserName(username, login) {
 };
 
 function checkUserBio(bio) {
-    if(bio === null) {
+    if(bio === null || bio === "") {
         bioDisplay.textContent = "This profile has no bio.";
         bioDisplay.classList.add("transparent");
     } else {

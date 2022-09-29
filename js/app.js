@@ -52,7 +52,7 @@ function displayUserData(user) {
     checkUserLocation(user.location);
     checkUserBlog(user.blog);
     checkUserTwitter(user.twitter_username);
-    checkUserCompany(user.company);
+    checkUserCompany(user.company, user.html_url);
 };
 
 function convertDate(datetime) {
@@ -107,9 +107,12 @@ function checkUserTwitter(twitter) {
     };
 };
 
-function checkUserCompany(company) {
+function checkUserCompany(company, fallback) {
     if(company === null || company === "") {
         disableLink(companyDisplay, companyIcon);
+    } else if(!company.includes("@")) {
+        enableLink(companyDisplay, companyIcon, company);
+        companyDisplay.href = fallback;
     } else {
         enableLink(companyDisplay, companyIcon, company);
         company = company.slice(1);
